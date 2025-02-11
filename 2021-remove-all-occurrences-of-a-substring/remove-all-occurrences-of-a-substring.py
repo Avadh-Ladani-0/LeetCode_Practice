@@ -1,18 +1,17 @@
 class Solution:
     def removeOccurrences(self, s: str, part: str) -> str:
-        st=[]
+        st_string=""
         if len(part)>len(s):
             return s
         for i in range(len(part)-1):
-            st.append(s[i])
+            st_string+=s[i]
 
         for i in range(len(part)-1,len(s)):
-            st.append(s[i])
-            sts="".join(st)
-            if sts[len(sts)-len(part):len(sts)]==part:
-                st=st[:len(st)-len(part)]
+            st_string+=s[i]
+            if st_string[len(st_string)-len(part):len(st_string)]==part:
+                st_string=st_string[:len(st_string)-len(part)]
         
-        return "".join(st)
+        return st_string
                 
 
 
