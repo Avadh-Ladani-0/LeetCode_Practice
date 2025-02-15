@@ -20,7 +20,6 @@ class ProductOfNumbers:
         return self.list[-1] // self.list[-k - 1]
         
 
-
 # Your ProductOfNumbers object will be instantiated and called as such:
 # obj = ProductOfNumbers()
 # obj.add(num)
