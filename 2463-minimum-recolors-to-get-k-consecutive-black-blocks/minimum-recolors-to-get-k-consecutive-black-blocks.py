@@ -1,5 +1,7 @@
 class Solution:
     def minimumRecolors(self, blocks: str, k: int) -> int:
+        # brute force
+
         # mini=float('+inf')
         # for i in range(len(blocks)-(k-1)):
         #     t_count=0
@@ -11,6 +13,8 @@ class Solution:
         #     mini=min(t_count,mini)
         #     print(mini,t_count)
 
+        # optimal
+        
         mini=0
 
         for i in range(k):
