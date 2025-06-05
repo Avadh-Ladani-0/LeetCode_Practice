@@ -8,7 +8,6 @@ class Solution:
                 nums[index]=nums[i]
                 index+=1
                 print(nums)
-            else:
                 count+=1
         
-        return len(nums)-count
+        return count
