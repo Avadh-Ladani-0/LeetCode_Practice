@@ -1,5 +1,4 @@
 # Write your MySQL query statement below
-# Write your MySQL query statement below
 with s1 as (select user_id, count(*) as counter1 from Confirmations
 group by user_id),
 
