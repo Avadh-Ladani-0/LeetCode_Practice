@@ -1,13 +1,24 @@
-class Solution:
-    def majorityElement(self, nums: List[int]) -> int:
-        curr=nums[0]
-        count=1
-        for i in range(1,len(nums)):
-            if nums[i]!=curr:
-                count-=1
-                if count==0:
-                    curr=nums[i]
-                    count=1
+class Solution(object):
+    def majorityElement(self, nums):
+        n = len(nums)
+        cnt = 1 
+        el = nums[0] 
+
+        for i in range(1,n):
+            if cnt == 0:
+                el = nums[i]
+                cnt += 1
+            elif el == nums[i]:
+                cnt += 1
             else:
-                count+=1
-        return curr
+                cnt -= 1
+
+        # cnt1 = 0
+        # for i in range(n):
+        #     if nums[i] == el:
+        #         cnt1 += 1
+
+        # if cnt1 > (n / 2):
+        #     return el
+        return el
+        
